@@ -9,6 +9,8 @@
 // 1	1	 0	 1
 // 1	1	 1	 1
 
+// 2x1 mux
+
 module m_mux (
   input i_a,
   input i_b,
@@ -41,3 +43,5 @@ m_or or_gate (
   .i_b(and2_to_or),
   .o_out(o_out)
   );
+  
+endmodule

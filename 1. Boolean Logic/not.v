@@ -3,3 +3,5 @@ module m_not(
   output o_out)
   
 assign o_out = ~i_a;
+
+endmodule

@@ -9,3 +9,5 @@ else if (i_b == 1)
   assign o_out = 1;
 else
   assign o_out = 0;
+  
+endmodule

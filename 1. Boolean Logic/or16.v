@@ -1,19 +1,21 @@
-// not gate for 16-bit wide input
-module m_not16 #(parameter N = 16)
+// or gate with two 16-bit wide inputs
+module m_or16 #(parameter N = 16)
   (
   input [N-1:0] i_a,
+  input [N-1:0] i_b,
   output [N-1:0] o_out
-  );
+  )
   
 genvar i;
 generate
   for (i = 0; i < N; i = i + 1)
   begin
-    m_not N_not_insts (
+    m_or N_or_insts (
       .i_a(i_a[i]),
+      .i_b(i_b[i]),
       .o_out(o_out[i])
       );
-  end
-endgenerate 
-
+   end
+endgenerate
+  
 endmodule

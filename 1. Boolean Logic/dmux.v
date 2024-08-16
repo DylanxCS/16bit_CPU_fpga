@@ -5,6 +5,8 @@
 // 1	 0	1	0
 // 1	 1	0	1
 
+// 2x1 dmux
+
 module dmux (
   input i_in,
   input i_sel,
@@ -29,3 +31,5 @@ m_and and2 (
   .i_b(i_sel),
   .o_out(o_b)
   );
+  
+endmodule
