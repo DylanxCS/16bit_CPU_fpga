@@ -3,24 +3,28 @@
 module test ();
 
 reg r_CLK = 0;
-reg a = 0;
-reg b = 0;
-wire w_out;
+reg a = 1;
+reg b = 1;
+reg sel = 0;
+wire w_outa;
+wire w_outb;
 
 // Clock generation
 always #20 r_CLK = ~r_CLK;
 
-m_or inst (
-  .i_a(a),
-  .i_b(b),
-  .o_out(w_out)
+m_not16 inst (
+  .i_in(a),
+  //.i_out(b),
+  .i_sel(sel),
+  .o_a(w_outa),
+  .o_b(w_outb)
 );
 
 initial begin
   $dumpfile("dump.vcd");
   $dumpvars(0);
   #60;
-  b = 1;
+  sel = 1;
   #100; 
   $finish;
 end

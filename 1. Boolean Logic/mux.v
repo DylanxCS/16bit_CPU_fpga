@@ -14,8 +14,8 @@
 module m_mux (
   input i_a,
   input i_b,
-  input i_sel,
-  input o_out)
+  input i_sel, 
+  output o_out);
 
 wire not_sel_to_and1;
 wire and1_to_or;

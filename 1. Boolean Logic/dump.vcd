@@ -1,5 +1,5 @@
 $date
-	Tue Aug 20 22:22:10 2024
+	Thu Aug 22 15:02:25 2024
 $end
 $version
 	Icarus Verilog
@@ -7,15 +7,38 @@ $end
 $timescale
 	10ps
 $end
+$scope module m_or $end
+$var wire 1 ! i_a $end
+$var wire 1 " i_b $end
+$var wire 1 # o_out $end
+$upscope $end
 $scope module test $end
-$var wire 1 ! w_out $end
-$var reg 1 " a $end
-$var reg 1 # b $end
-$var reg 1 $ r_CLK $end
+$var wire 1 $ w_outb $end
+$var wire 1 % w_outa $end
+$var reg 1 & a $end
+$var reg 1 ' b $end
+$var reg 1 ( r_CLK $end
+$var reg 1 ) sel $end
 $scope module inst $end
-$var wire 1 " i_a $end
-$var wire 1 # i_b $end
-$var wire 1 ! o_out $end
+$var wire 1 & i_in $end
+$var wire 1 ) i_sel $end
+$var wire 1 $ o_b $end
+$var wire 1 % o_a $end
+$var wire 1 * not_sel_to_and1 $end
+$scope module and1 $end
+$var wire 1 & i_a $end
+$var wire 1 % o_out $end
+$var wire 1 * i_b $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 & i_a $end
+$var wire 1 ) i_b $end
+$var wire 1 $ o_out $end
+$upscope $end
+$scope module not_sel $end
+$var wire 1 ) i_a $end
+$var wire 1 * o_out $end
+$upscope $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -24,26 +47,34 @@ $dumpall
 $end
 #0
 $dumpvars
+1*
+0)
+0(
+1'
+1&
+1%
 0$
-0#
-0"
-0!
+x#
+z"
+z!
 $end
 #2000
-1$
+1(
 #4000
-0$
+0(
 #6000
-1!
+0%
 1$
-1#
+0*
+1(
+1)
 #8000
-0$
+0(
 #10000
-1$
+1(
 #12000
-0$
+0(
 #14000
-1$
+1(
 #16000
-0$
+0(

@@ -7,11 +7,11 @@
 
 // 2x1 dmux
 
-module dmux (
+module m_dmux (
   input i_in,
   input i_sel,
   output o_a,
-  output o_b)
+  output o_b);
   
 wire not_sel_to_and1;
   

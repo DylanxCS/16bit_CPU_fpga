@@ -8,7 +8,7 @@
 module m_xor (
   input i_a,
   input i_b,
-  output o_out)
+  output o_out);
   
   wire not_a_to_and2;
   wire not_b_to_and1;
